@@ -20,6 +20,7 @@ function sendToGoogleAnalytics({name, delta, value, id}) {
 
 (function () {
   var script = document.createElement('script');
+  // https://github.com/GoogleChrome/web-vitals
   script.src = 'https://unpkg.com/web-vitals@3/dist/web-vitals.iife.js';
   script.onload = function () {
     webVitals.getCLS(sendToGoogleAnalytics);
